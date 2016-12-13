@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
     <head>
         <meta charset="utf-8">
         <script src="ActionIO.js"></script>
@@ -13,27 +13,26 @@
             .actionStyle {
                 width: 100%;
             }
-        }
         </style>
     </head>
-    
+
     <body>
-        
+
         <div id="actionsArea"></div>
-        
+
         <script>
-            
+
             function handleAction(action) {
                 console.log("User pressed " + action);
                 if (action === "clear") actions.clearActions();
             }
-            
+
             var actions = new ActionIO("actionsArea");
             actions.setHandleAction(handleAction);
             actions.createAction("Nimm den Keks", "nimm_keks");
             actions.createAction("Gehe nach Norden", "gehe_norden");
             actions.createAction("L&ouml;schen", "clear");
-            
+
         </script>
     </body>
 
